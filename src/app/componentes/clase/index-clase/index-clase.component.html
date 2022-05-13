@@ -1,0 +1,31 @@
+<section>
+
+    <div class="d-flex justify-content-between">
+      <h4>Lista de clases</h4>
+      <a routerLink="/crearClase" class="btn btn-success">Crear Clase</a>
+    </div>
+
+    <br>
+    
+    <table class="table ">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Salon</th>
+        <th>Maestro</th>
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let claseItem of claseItems">
+        <td>{{ claseItem.id }}</td>
+        <td>{{ claseItem.nombre }}</td>
+        <td>{{ claseItem.salon }}</td>
+        <td>{{ claseItem.maestro }}</td>
+        <td>
+          <a href="#" [routerLink]="['/componentes/clase/editar-clase ', 'edit', claseItem.id  ]" class="btn btn-primary">Edit</a>
+          <!-- <button type="button" (click)="deletePerson(person.id)" class="btn btn-danger">Delete</button> -->
+        </td>
+      </tr>
+    </table>
+    <router-outlet></router-outlet>
+ </section>
+

@@ -1,0 +1,96 @@
+<p>editar-maestro works!</p>
+<div class="container">
+  
+    <div class="d-flex justify-content-between">
+      <h4>Editar Maestro</h4>
+      <a href="#" routerLink="/listaMaestros" class="btn btn-primaryt">Back</a>
+    </div>
+
+    <hr>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="nombre">Nombre:</label>
+              <input
+                formControlName="nombre"
+                [(ngModel)]="maestro.nombre"
+                id="nombre"
+                type="text"
+                class="form-control">
+             <!-- <div *ngIf="f.nombre.touched && f.nombre.invalid" class="alert alert-danger">
+                  <div *ngIf="f.nombre.errors.required">*Nombre is required.</div>
+                  <div *ngIf="f.nombre.errors.pattern">*El nombre debe contener solo letras.</div>
+              </div> -->
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="apellidos">Apellidos:</label>
+              <input
+                formControlName="apellidos"
+                [(ngModel)]="maestro.apellidos"
+                id="apellidos"
+                type="text"
+                class="form-control">
+             <!--  <div *ngIf="f.apellidos.touched && f.apellidos.invalid" class="alert alert-danger">
+                  <div *ngIf="f.apellidos.errors.required">*El apellido es requerido.</div>
+                  <div *ngIf="f.apellidos.errors.email">*Debe contener letras.</div>
+              </div> -->
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="edad">Edad:</label>
+              <input
+                [(ngModel)]="maestro.edad"
+                formControlName="edad"
+                id="edad"
+                type="text"
+                class="form-control">
+            <!--  <div *ngIf="f.edad.touched && f.edad.invalid" class="alert alert-danger">
+                  <div *ngIf="f.edad.errors.required">*la edad es requerida.</div>
+                  <div *ngIf="f.edad.errors.pattern">*La edad debe ser un numero.</div>
+              </div> -->
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="telefono">Telefono:</label>
+              <input
+                [(ngModel)]="maestro.telefono"
+                formControlName="telefono"
+                id="telefono"
+                type="text"
+                class="form-control">
+            <!--  <div *ngIf="f.edad.touched && f.edad.invalid" class="alert alert-danger">
+                  <div *ngIf="f.edad.errors.required">*la edad es requerida.</div>
+                  <div *ngIf="f.edad.errors.pattern">*La edad debe ser un numero.</div>
+              </div> -->
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="correo">correo:</label>
+              <input
+                [(ngModel)]="maestro.correo"
+                formControlName="correo"
+                id="correo"
+                type="text"
+                class="form-control">
+            <!--  <div *ngIf="f.edad.touched && f.edad.invalid" class="alert alert-danger">
+                  <div *ngIf="f.edad.errors.required">*la edad es requerida.</div>
+                  <div *ngIf="f.edad.errors.pattern">*La edad debe ser un numero.</div>
+              </div> -->
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Update</button>
+    </form>
+</div>

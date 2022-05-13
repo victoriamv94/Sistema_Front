@@ -1,0 +1,90 @@
+<p>crear-maestro works!</p>
+<div>
+
+    <div class="d-flex justify-content-between">
+      <h4>Form customer</h4>
+      <a href="#" routerLink="/listaMaestros" class="btn btn-primaryt">Back</a>
+    </div>
+  
+    <hr/>
+  
+         <form  [formGroup]="form" (ngSubmit)="submit()">
+  
+          <div class="form-group row">
+              <div class="col-md-6 ">
+                <label for="nombre">Nombre:</label>
+                <input
+                  formControlName="nombre"
+                  id="nombre"
+                  type="text"
+                  class="form-control">
+                <!-- <div *ngIf="f.nombre.touched && f.nombre.invalid" class="alert alert-danger">
+                    <div *ngIf="f.nombre.errors.required">*Name is required.</div>
+                    <div *ngIf="f.nombre.errors.pattern">*The name must only contain letters.</div>
+                </div> -->
+              </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-md-6 ">
+                <label for="apellidos">Apellidos:</label>
+                <input
+                  formControlName="apellidos"
+                  id="apellidos"
+                  type="text"
+                  class="form-control">
+                <!-- <div *ngIf="f.apellidos.touched && f.apellidos.invalid" class="alert alert-danger">
+                    <div *ngIf="f.apellidos.errors.required">*Email is required.</div>
+                    <div *ngIf="f.apellidos.errors.pattern">*The last name must be valid.</div>
+                </div> -->
+              </div>
+          </div>
+  
+          <div class="form-group row">
+              <div class="col-md-6 ">
+                <label for="edad">edad:</label>
+                <input
+                  formControlName="edad"
+                  id="edad"
+                  type="text"
+                  class="form-control">
+               <!--<div *ngIf="f.edad.touched && f.edad.invalid" class="alert alert-danger">
+                    <div *ngIf="f.edad.errors.required">*Phone is required.</div>
+                    <div *ngIf="f.edad.errors.pattern">*The age must only contain numbers.</div>
+                </div> --> 
+              </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="telefono">Telefono:</label>
+              <input
+                formControlName="telefono"
+                id="telefono"
+                type="text"
+                class="form-control">
+            <!--  <div *ngIf="f.telefono.touched && f.telefono.invalid && f.name!=null" class="alert alert-danger">
+                  <div *ngIf="f.telefono.errors.required">*Name is required.</div>
+                  <div *ngIf="f.telefono.errors.pattern">*The telephone must only contain numbers.</div>
+              </div> --> 
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="correo">Correo:</label>
+              <input
+                formControlName="correo"
+                id="correo"
+                type="text"
+                class="form-control">
+            <!--  <div *ngIf="f.correo.touched && f.correo.invalid && f.name!=null" class="alert alert-danger">
+                  <div *ngIf="f.correo.errors.required">*Name is required.</div>
+                  <div *ngIf="f.correo.errors.email">*The email must valid.</div>
+              </div> --> 
+            </div>
+        </div>
+  
+          <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+      </form>
+</div>
